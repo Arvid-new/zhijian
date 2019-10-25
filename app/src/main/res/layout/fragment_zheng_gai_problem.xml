@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.gxyjfragment.ZhengGaiProblemFragment">
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+    <!--android:id="@+id/swipeRefreshLayout"-->
+    <!--android:layout_marginBottom="@dimen/border_50"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/zhenggaiRcv"
+        android:layout_above="@+id/addProblemBT"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+    <Button
+        android:id="@+id/addProblemBT"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/lightbluetodeepblue_radius50"
+        android:text="新增问题"
+        android:textColor="@color/white_"
+        android:textSize="15sp" />
+
+</RelativeLayout>

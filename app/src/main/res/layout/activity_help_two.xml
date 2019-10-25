@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.haozhiyan.zhijian.activity.MePackage.HelpAct">
+
+    <include layout="@layout/app_white_action_bar" />
+
+    <TextView
+        android:id="@+id/tv_Type"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_45"
+        android:layout_below="@+id/action_bars"
+        android:background="@color/gray_back"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/sp15"
+        android:text="问题"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp16" />
+
+    <ListView
+        android:id="@+id/problemList_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_Type"
+        android:divider="@color/line_gray_light"
+        android:dividerHeight="@dimen/border_1" />
+</RelativeLayout>

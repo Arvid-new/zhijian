@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.haozhiyan.zhijian">
+
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" /> <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".application.MyApp"
+        android:allowBackup="false"
+        android:icon="${app_icon}"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyCustomTitleTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:theme,android:allowBackup">
+        <activity android:name=".activity.GCLDSelectProjectOrType"></activity>
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="553e7ea5075afb7e4aecc3f08ad72232" /> <!-- <meta-data -->
+        <!-- android:name="com.amap.api.v2.apikey" -->
+        <!-- android:value="6266b5020c0e1072707120c1cf17187b" /> -->
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <!-- 极光推送配置开始========================================================================================== -->
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service> <!-- since 3.3.0 接收JPush相关事件 -->
+        <receiver android:name=".jpush.PushReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver> <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <!-- User defined.  For test only 继承自cn.jpush.android.service.JCommonService -->
+        <service
+            android:name=".jpush.PushService"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service> <!-- 极光推送配置结束========================================================================================== -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MePackage.PersonalInfoActivity" />
+        <activity android:name=".activity.LoginActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".activity.DaiBanTypeVPActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activity.gxyj.GXYJActivity" />
+        <activity android:name=".activity.GCLDActivity" />
+        <activity android:name=".activity.workXcjc.XianChangJianChactivity" />
+        <activity android:name=".activity.workXcjc.JianChaPiCiActivity" />
+        <activity android:name=".activity.workXcjc.AddOrEditPiCi" />
+        <activity android:name=".activity.workXcjc.AddTroubleActivity" />
+        <activity
+            android:name=".activity.OnSiteInspectionDetails"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.RealQuantityDetails"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activity.workXcjc.PiCiDetailActivity" />
+        <activity android:name=".activity.GCLDDetailActivity" />
+        <activity android:name=".activity.ShowBigImg" />
+        <activity
+            android:name=".activity.ShowVideo"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.AddLDActivity" />
+        <activity android:name=".activity.workXcjc.SelectAngle" />
+        <activity android:name=".activity.workXcjc.FunctionActivity" />
+        <activity android:name=".activity.CheckTip" />
+        <activity
+            android:name=".activity.SelectTRPOrAU"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activity.Calendar" />
+        <activity
+            android:name=".activity.workXcjc.PlaceSelectActivity"
+            android:launchMode="singleInstance" />
+        <activity android:name=".activity.workXcjc.JianChaItemSelectActivity" />
+        <activity android:name=".activity.workXcjc.JianChaGuideActivity" />
+        <activity android:name=".activity.MyWebView" />
+        <activity
+            android:name=".activity.clys.AcceptanceMaterials"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activity.workXcjc.JianChaGuideDetail" />
+        <activity android:name=".activity.workScsl.SCSLActivity" />
+        <activity android:name=".activity.workScsl.SCSLCollectActivity" />
+        <activity
+            android:name=".activity.gxyj.ProcessOver"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activity.workXcjc.XCJCTroubleEdit" />
+        <activity android:name=".activity.workScsl.SCSLCollectDetail" />
+        <activity android:name=".activity.workScsl.JCXRoomDetailActivity" />
+        <activity android:name=".activity.workScsl.SCSLDetail" />
+        <activity android:name=".activity.gxyj.TurnOverPart" />
+        <activity android:name=".activity.xcjcTroubleDetail.XCJCTroubleDetail" />
+        <activity android:name=".activity.xcjcTroubleDetail.XCJCTroubleDFYDetail" />
+        <activity android:name=".activity.xcjcTroubleDetail.XCJCTroubleCloseDetail" />
+        <activity android:name=".activity.xcjcTroubleDetail.XCJCTroubleTongGuoDetail" />
+        <activity android:name=".activity.workXcjc.ProblemDescList" />
+        <activity
+            android:name=".activity.workXcjc.XCJCImagesActivity"
+            android:launchMode="singleInstance">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".activity.gxyj.SendBack"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activity.gxyj.GCYJCollectDetail" />
+        <activity android:name=".activity.AbnormalClosing" />
+        <activity android:name=".activity.GXYJBackNote" />
+        <activity android:name=".activity.clys.WorkClys" />
+        <activity
+            android:name=".activity.clys.AddClysTask"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activity.clys.FirstCheckHistory" />
+        <activity android:name=".activity.clys.FirstCheckReport" />
+        <activity android:name=".activity.DaiBanActivity" />
+        <activity android:name=".activity.gxyj.GxYjPlaceSelect" />
+        <activity android:name=".activity.gxyj.GxYjH5" />
+        <activity android:name=".activity.workXcjc.XcJcBackReason" />
+        <activity android:name=".activity.workXcjc.XCJCShowH5Images" />
+        <activity android:name=".activity.gxyj.GxYjShowH5" />
+        <activity
+            android:name=".activity.gxyj.GXYJProblemDetails"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.reportforms.ReportFormsIndexActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.reportforms.YGGZLFormsActivity" />
+        <activity android:name=".activity.reportforms.XCJCFormsActivity" />
+        <activity android:name=".activity.reportforms.SCSLFormsActivity" />
+        <activity android:name=".activity.reportforms.GXYJFormsActivity" />
+        <activity android:name=".activity.reportforms.CLYSFormsActivity" />
+        <activity android:name=".activity.reportforms.BaseFormsActivity" />
+        <activity android:name=".activity.reportforms.SCSLFormDetailActivity" />
+        <activity android:name=".activity.reportforms.XCJCFormsDetailActivity" />
+        <activity android:name=".activity.MePackage.UpdatePass" />
+        <activity android:name=".activity.MePackage.UpdateMobile" />
+        <activity android:name=".activity.workXcjc.NewPlaceSelect" />
+        <activity android:name=".activity.MePackage.FeedBackProblem" />
+        <activity android:name=".activity.MePackage.FeedBackHistory" />
+        <activity android:name=".activity.MePackage.HelpAct" />
+        <activity android:name=".activity.MePackage.HelpActTwo" />
+        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".activity.reportforms.GXYJTableActivity" />
+        <activity android:name=".activity.MePackage.AboutActivity" />
+        <activity android:name=".activity.NoticeDetail" />
+        <activity android:name=".activity.reportforms.FormGXYJWebViewActivity" />
+    </application>
+
+</manifest>

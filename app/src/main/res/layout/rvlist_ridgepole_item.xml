@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <!--楼栋 android:stretchMode="spacingWidth" -->
+    <!--<com.haozhiyan.zhijian.view.MyGridView-->
+        <!--android:id="@+id/ridgepole_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:horizontalSpacing="@dimen/border_5"-->
+        <!--android:numColumns="4"-->
+        <!--android:padding="@dimen/border_5"-->
+        <!--android:verticalSpacing="@dimen/border_5" />-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ridgepole_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="@dimen/border_5"
+        android:padding="@dimen/border_5"
+        android:verticalSpacing="@dimen/border_5" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/gray_back"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="afterDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_50"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/border_10">
+
+        <CheckBox
+            android:id="@+id/cb_check"
+            android:layout_width="@dimen/border_20"
+            android:layout_height="@dimen/border_20"
+            android:background="@drawable/cb_selector"
+            android:button="@null" />
+
+        <TextView
+            android:id="@+id/tv_danWei"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/border_5"
+            android:text="施工单位人员"
+            android:textColor="@color/black_3"
+            android:textSize="@dimen/sp15" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="@dimen/border_20"
+            android:layout_height="@dimen/border_20"
+            android:layout_marginRight="@dimen/border_15"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_down_black" />
+    </LinearLayout>
+
+    <com.haozhiyan.zhijian.view.MyListView
+        android:id="@+id/child_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/line_color"
+        android:dividerHeight="@dimen/border_05"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <View style="@style/line" />
+</LinearLayout>

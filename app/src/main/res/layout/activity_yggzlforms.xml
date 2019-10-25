@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.reportforms.YGGZLFormsActivity">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:background="@color/white_"
+        app:tabIndicatorColor="@color/blue4"
+        app:tabSelectedTextColor="@color/blue4"
+        app:tabIndicatorHeight="@dimen/border_1"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/sp17"
+        android:layout_height="@dimen/border_45"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/border_45"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="@dimen/border_10"
+                android:layout_marginBottom="@dimen/border_10"
+                android:layout_marginLeft="@dimen/border_20"
+                android:layout_marginRight="@dimen/border_20"
+                android:id="@+id/rcv_choose_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/contentView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/layout_select_project" />
+    </FrameLayout>
+</LinearLayout>

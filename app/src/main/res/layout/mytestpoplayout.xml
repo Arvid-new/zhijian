@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mr"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/border_10"
+        android:text="默认"
+        android:textColor="#232323"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tower_floor_sort"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/border_10"
+        android:text="按楼栋楼层"
+        android:textColor="#232323"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/time_sortZ"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/border_10"
+        android:text="按登记时间正序"
+        android:textColor="#232323"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/time_sortD"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/border_10"
+        android:text="按登记时间倒序"
+        android:textColor="#232323"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

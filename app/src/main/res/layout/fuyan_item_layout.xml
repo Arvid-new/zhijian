@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/border_45"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/border_10"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="复验人"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_fuYan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp15" />
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="@dimen/border_25"
+                android:layout_height="@dimen/border_25"
+                android:visibility="gone"
+                android:scaleType="centerInside"
+                android:src="@drawable/img_blue_message" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_fuYanDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:hint="2019-05-23"
+        android:padding="@dimen/border_10"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_color"
+        android:textSize="@dimen/sp16" />
+
+    <LinearLayout style="@style/mylinearLayout2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/border_10"
+            android:layout_marginRight="@dimen/border_8"
+            android:layout_weight="3.5"
+            android:gravity="center"
+            android:text="复验图片" />
+
+        <com.haozhiyan.zhijian.view.MyRecycleView
+            android:id="@+id/rv_fuyanImgs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

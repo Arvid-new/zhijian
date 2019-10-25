@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/border_8">
+
+    <ImageView
+        android:id="@+id/iv_chat"
+        android:layout_width="@dimen/border_30"
+        android:layout_height="@dimen/border_30"
+        android:layout_margin="@dimen/border_5"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        android:src="@drawable/img_chat_white" />
+
+    <ImageView
+        android:id="@+id/iv_call"
+        android:layout_width="@dimen/border_30"
+        android:layout_height="@dimen/border_30"
+        android:scaleType="centerInside"
+        android:layout_margin="@dimen/border_5"
+        android:src="@drawable/img_call_white" />
+</LinearLayout>

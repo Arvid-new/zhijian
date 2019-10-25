@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MePackage.UpdatePass">
+
+    <include layout="@layout/app_white_action_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_bars"
+        android:background="@color/white_"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/sp15">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/border_8"
+            android:background="@color/gray_back" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/border_10"
+            android:padding="@dimen/border_5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="旧密码"
+                android:textColor="@color/black_3"
+                android:textSize="@dimen/sp15" />
+
+            <EditText
+                android:id="@+id/et_oldPass"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="@dimen/border_10"
+                android:layout_weight="1"
+                android:background="@drawable/gray_border_shape"
+                android:cursorVisible="true"
+                android:hint="输入旧密码"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/border_10"
+                android:textColor="@color/black_3"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/border_5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="新密码"
+                android:textColor="@color/black_3"
+                android:textSize="@dimen/sp15" />
+
+            <EditText
+                android:id="@+id/et_newPass"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="@dimen/border_10"
+                android:layout_weight="1"
+                android:background="@drawable/gray_border_shape"
+                android:cursorVisible="true"
+                android:hint="输入新密码"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/border_10"
+                android:textColor="@color/black_3"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_40"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/border_30"
+        android:layout_marginRight="@dimen/border_30"
+        android:background="@drawable/blue_10shape"
+        android:text="确认修改"
+        android:textColor="@color/white_"
+        android:textSize="@dimen/sp15" />
+</RelativeLayout>

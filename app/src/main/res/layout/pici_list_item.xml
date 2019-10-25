@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/itemBack"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_40"
+        android:orientation="horizontal"
+        android:padding="@dimen/border_5"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/border_10"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_select"
+                android:layout_width="@dimen/border_24"
+                android:layout_height="@dimen/border_24"
+                android:background="@drawable/cb_selector"
+                android:button="@null"
+                android:checked="false" />
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/border_8"
+                android:text="测试测试测试"
+                android:textColor="@color/black_3"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/border_5"
+                android:layout_marginBottom="@dimen/border_5"
+                android:background="@color/gray8" />
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="详情"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+    </LinearLayout>
+    <View style="@style/line"/>
+</LinearLayout>

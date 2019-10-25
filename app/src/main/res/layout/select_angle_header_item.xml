@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_angle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/border_40"
+    android:background="@color/white"
+    android:layout_marginTop="@dimen/border_3"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/border_15">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已选："
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp15" />
+
+    <EditText
+        android:id="@+id/tv_hasAngle"
+        android:layout_width="wrap_content"
+        android:focusable="false"
+        android:maxHeight="120dp"
+        android:background="@color/white_"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black_3"
+        android:textSize="@dimen/sp14" />
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_45"
+        android:background="@color/gray_back"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/sp15"
+        android:text="相关问题"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp16" />
+    <com.haozhiyan.zhijian.view.MyListView
+        android:id="@+id/oftenProblemList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/line_gray_light"
+        android:dividerHeight="@dimen/border_1" />
+</LinearLayout>

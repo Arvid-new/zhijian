@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--用来给使用到此样式的对话框设置边距的，如不清除，可能改padding值。自己试验一下-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@android:color/transparent">
+        <shape android:shape="rectangle">
+            <corners android:radius="5dp" /><!--不可删除，删除了就会显示黑色的背景-->
+            <solid android:color="@android:color/transparent"/>
+            <padding android:left="20dp" android:right="20dp" android:bottom="15dp"/>
+        </shape>
+    </item>
+</selector>

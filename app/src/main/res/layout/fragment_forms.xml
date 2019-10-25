@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_forms"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_45"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_select"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/border_30"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/border_10">
+
+            <TextView
+                android:id="@+id/tv_select_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名门翠园"
+                android:textColor="@color/black_3"
+                android:textSize="@dimen/sp17" />
+
+            <ImageView
+                android:id="@+id/iv_select_icon"
+                android:layout_width="@dimen/border_12"
+                android:layout_height="@dimen/border_12"
+                android:layout_marginLeft="@dimen/border_5"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_sanjiao_down"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_forms">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_formsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_back2"
+                android:paddingLeft="@dimen/border_8"
+                android:paddingRight="@dimen/border_8"
+                android:paddingTop="@dimen/border_8"
+                android:scrollbars="none" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <!--下拉窗口布局-->
+        <RelativeLayout
+            android:id="@+id/rl_hidden"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/translate_ban2"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/linear_close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暂无房源数据"
+                    android:textColor="@color/black_3"
+                    android:textSize="@dimen/sp17" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

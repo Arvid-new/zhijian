@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_40"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/border_20"
+            android:layout_weight="1"
+            android:text="地面"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/sp17" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/border_10"
+            android:text="详情"
+            android:textColor="@color/black3"
+            android:textSize="@dimen/sp17" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/border_20"
+            android:src="@mipmap/youcejiantou" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_1"
+        android:layout_marginLeft="@dimen/border_20"
+        android:background="@color/gray_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_100"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/border_20"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="@color/black2"
+                android:textSize="@dimen/border_22" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="问题总数"
+                android:textColor="@color/black2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_yizhenggai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/border_10"
+                android:gravity="center"
+                android:text="40%已整改"
+                android:textColor="@color/black2" />
+
+            <RelativeLayout
+                android:layout_width="204dp"
+                android:layout_height="@dimen/border_20"
+                android:layout_marginLeft="@dimen/border_40"
+                android:layout_marginRight="@dimen/border_40">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="8dp"
+                    android:layout_centerVertical="true"
+                   >
+
+                    <View
+                        android:id="@+id/view_tag0"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_green_left_corner" />
+                    <View
+                        android:id="@+id/view_tag1"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#309770" />
+                    <View
+                        android:id="@+id/view_tag2"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="#e7981a" />
+
+                    <View
+                        android:id="@+id/view_tag3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_gray_right_corner"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_rate"
+                    android:layout_width="@dimen/border_2"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_green_deep" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/border_10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ytg_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="@color/black2" />
+
+            <View
+                android:layout_width="@dimen/border_15"
+                android:layout_height="3dp"
+                android:background="@drawable/shape_green_light" />
+
+            <TextView
+                android:id="@+id/tv_ytg_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已通过30%"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/sp12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dfy_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/black2" />
+
+            <View
+                android:layout_width="@dimen/border_15"
+                android:layout_height="3dp"
+                android:background="@drawable/shape_green_deep" />
+
+
+            <TextView
+                android:id="@+id/tv_dfy_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待复验10%"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/sp12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dzg_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textColor="@color/black2" />
+
+            <View
+                android:layout_width="@dimen/border_15"
+                android:layout_height="3dp"
+                android:background="@drawable/shape_orange" />
+
+            <TextView
+                android:id="@+id/tv_dzg_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待整改50%"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/sp12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_fzcgb_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/black2" />
+
+            <View
+                android:layout_width="@dimen/border_15"
+                android:layout_height="3dp"
+                android:background="@drawable/shape_gray" />
+
+
+            <TextView
+                android:id="@+id/tv_fzcgb_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="非正常关闭10.0%"
+                android:textColor="@color/black3"
+                android:textSize="@dimen/sp12" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_10"
+        android:background="@color/gray_back" />
+</LinearLayout>

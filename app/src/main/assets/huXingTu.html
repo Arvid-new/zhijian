@@ -1,0 +1,91 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+           user-scalable=no,
+            initial-scale=1.0,
+             maximum-scale=1.0,
+              minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body {
+            color: #000;
+            background: #f3f3f3;
+            font-size: 62.5%;
+        }
+
+        .body {
+            position: relative;
+            height: 88vh;
+            margin-top: 2.4vh;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .body i {
+            position: absolute;
+            display: block;
+            top: 30%;
+            left: 50%;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: #ff4546;
+        }
+
+        .body h5 {
+            margin-top: 6vh;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .body img {
+            margin-top: 20vh;
+            width: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="body">
+    <img src="C:\Users\Administrator\Pictures\wallImages\cat.jpg" alt="户型图">
+    <h5 class="roomData">1#1单元1层01户</h5>
+    <i class="point" style=" display: none"></i>
+</div>
+<div class="bl">
+
+</div>
+<script src="jquery-1.12.4.js"></script>
+<div class="bl">
+
+</div>
+<script>
+
+    $(function(){
+         var str='123';
+        var str1='<input type="button" value="获取数据" onclick="AJSInterface.getPoint('+str+')"/><input type="button" value="图书列表" onclick="AJSInterface.showList()"/>'
+
+        $('.bl').html(str1);
+    })
+    window["AndroidToHtml"] = function (msg) {
+        alert(msg + "123")
+    };
+function getMsg(params){
+    alert("你好"+params);
+ }
+
+</script>
+</body>
+</html>

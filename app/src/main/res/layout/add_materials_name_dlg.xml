@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_10_radius"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/titleRCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp">
+
+        <EditText
+            android:id="@+id/clNameET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="请输入名称"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black2"
+            android:textColorHint="@color/text_color_b6"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5px"
+            android:layout_alignTop="@+id/clNameET"
+            android:background="@color/black_d4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5px"
+            android:layout_alignBottom="@+id/clNameET"
+            android:background="@color/black_d4" />
+
+        <View
+            android:layout_width="1.5px"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/clNameET"
+            android:background="@color/black_d4" />
+
+        <View
+            android:layout_width="1.5px"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/clNameET"
+            android:background="@color/black_d4" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tipTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="请选择数量单位"
+        android:textColor="@color/text_color_b6"
+        android:textSize="13sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/itemRCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5px"
+        android:background="@color/gray_f5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancelBT"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/left_bottom_radius_10_white"
+            android:text="取消"
+            android:textColor="@color/black2"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="1.5px"
+            android:layout_height="match_parent"
+            android:background="@color/gray_f5" />
+
+        <Button
+            android:id="@+id/okBT"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/right_bottom_radius_10_white"
+            android:text="确定"
+            android:textColor="@color/blue5"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</LinearLayout>

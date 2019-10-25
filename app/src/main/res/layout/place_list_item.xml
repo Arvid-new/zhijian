@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/border_5">
+    <!--房子检查部位条目-->
+    <TextView
+        android:id="@+id/tv_place"
+        android:layout_width="@dimen/border_80"
+        android:layout_height="@dimen/border_30"
+        android:background="@drawable/place_text_selector"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="2栋"
+        android:textColor="@color/black_3"
+        android:textSize="@dimen/sp15" />
+</RelativeLayout>

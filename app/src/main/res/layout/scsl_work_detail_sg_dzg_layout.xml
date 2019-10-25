@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_zgStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingLeft="@dimen/border_15"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/view_Line"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/red2" />
+
+            <TextView
+                android:id="@+id/tv_scSlState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="待整改"
+                android:textColor="@color/black2" />
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="570dp"
+            android:layout_below="@+id/ll_zgStatus" />
+        <!--合格率-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/border_40"
+            android:layout_weight="2"
+            android:background="@color/white_"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/border_10"
+                android:layout_weight="1"
+                android:text="合格率"
+                android:textColor="@color/black_3"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_percent_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/border_10"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="100%"
+                android:textColor="@color/black_3"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+        <!--点数-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/border_40"
+            android:layout_marginTop="@dimen/border_8"
+            android:layout_weight="2"
+            android:background="@color/white_"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/border_10"
+                android:layout_weight="1"
+                android:text="点数"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_point_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/border_20"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="5"
+                android:textColor="@color/black_3"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+        <!--合格标准-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/border_40"
+            android:layout_weight="2"
+            android:background="@color/white_"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/border_10"
+                android:layout_weight="1"
+                android:text="合格标准"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_pass_rule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/border_20"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="合格标准[-5,9]"
+                android:textColor="@color/black_3"
+                android:textSize="@dimen/sp15" />
+        </LinearLayout>
+        <!--相关图片布局-->
+        <LinearLayout
+            android:id="@+id/ll_aboutImgs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/webView"
+            android:layout_marginTop="@dimen/border_8"
+            android:background="@color/white"
+            android:minHeight="@dimen/border_45"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/border_10"
+                android:layout_weight="4"
+                android:gravity="left"
+                android:text="相关照片"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp15" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/scSlRcv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:nestedScrollingEnabled="true"
+                android:paddingLeft="@dimen/border_8"
+                android:paddingRight="@dimen/border_8"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <!--检查人信息-->
+        <LinearLayout
+            android:id="@+id/ll_jcr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_aboutImgs"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/border_45">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/border_10"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:text="检查人"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/border_10"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_inspectionPeople"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="甲方"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp15" />
+
+                    <ImageView
+                        android:id="@+id/iv_check_people"
+                        android:layout_width="@dimen/border_20"
+                        android:layout_height="@dimen/border_20"
+                        android:paddingLeft="6dp"
+                        android:src="@drawable/img_blue_message"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_CreatorTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="2019-05-23"
+                android:padding="@dimen/border_10"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_rectify_people"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_jcr"
+            android:layout_marginTop="@dimen/border_10"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/border_45"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/border_10"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:text="整改人"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp15" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/border_10"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_rectify_people"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="甲方"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp15" />
+
+                    <ImageView
+                        android:id="@+id/iv_rectify_people"
+                        android:layout_width="@dimen/border_20"
+                        android:layout_height="@dimen/border_20"
+                        android:paddingLeft="6dp"
+                        android:src="@drawable/img_blue_message"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/border_20"
+                    android:layout_height="@dimen/border_20"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/border_20"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/arrow_right_gray_to" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_rectify_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_rectify_people"
+            android:background="@color/white"
+            android:gravity="center"
+            android:hint="2019-05-23"
+            android:padding="@dimen/border_10"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textSize="@dimen/sp16"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_zgPicInstruct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rectify_time">
+            <!--整改图片布局-->
+            <LinearLayout
+                android:id="@+id/ll_rectify_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="@dimen/border_45"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/border_10"
+                    android:layout_weight="4"
+                    android:gravity="left"
+                    android:text="整改照片"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp15" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/scSlZgRcv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:nestedScrollingEnabled="true"
+                    android:paddingLeft="@dimen/border_8"
+                    android:paddingRight="@dimen/border_8"
+                    android:textColor="@color/black2"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <!--描述布局-->
+            <RelativeLayout
+                android:id="@+id/rl_readme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_rectify_img"
+                android:layout_marginTop="@dimen/border_1"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@+id/et_instruct_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="补充说明"
+                    android:maxLength="200"
+                    android:minHeight="60dp"
+                    android:padding="@dimen/border_8"
+                    android:textColor="@color/text_color2"
+                    android:textColorHint="@color/text_color_ca"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/id_editor_detail_font_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/et_instruct_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="@dimen/border_10"
+                    android:paddingBottom="@dimen/border_8"
+                    android:text="@string/string_editor_detail_default_font"
+                    android:textColor="@color/text_color2"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--通知整改功能布局-->
+        <LinearLayout
+            android:id="@+id/ll_remindZG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_zgPicInstruct"
+            android:layout_marginBottom="@dimen/border_40"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/border_45"
+                android:layout_marginBottom="@dimen/border_20"
+                android:background="#eff0f4">
+
+                <LinearLayout
+                    android:id="@+id/ll_checkRemind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkRemind"
+                        android:layout_width="@dimen/border_25"
+                        android:layout_height="@dimen/border_25"
+                        android:layout_marginLeft="@dimen/border_10"
+                        android:background="@drawable/check_null"
+                        android:clickable="false"
+                        android:checked="false"
+                        android:button="@null" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/border_5"
+                        android:text="通知整改"
+                        android:textColor="@color/black_3"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_zg_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/border_45"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/border_8">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="整改人"
+                        android:textColor="@color/black_3"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/zhengGaiPeople"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:gravity="right|center_vertical"
+                        android:hint="请选择"
+                        android:textColor="@color/text_color2"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="18dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/arrow_right_gray_to" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#eff0f4"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/remindZG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/border_20"
+                        android:layout_marginTop="@dimen/border_10"
+                        android:layout_marginRight="@dimen/border_20"
+                        android:background="@drawable/blue_10shape"
+                        android:text="通知整改"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!--rl_readme-->
+        <TextView
+            android:id="@+id/tv_completeZG"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/border_40"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/border_10"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="完成整改"
+            android:textColor="@color/white_"
+            android:textSize="@dimen/sp15"
+            android:visibility="gone" />
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

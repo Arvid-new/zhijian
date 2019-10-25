@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/home_back"
+    android:id="@+id/ll_content"
+    tools:context=".activity.MePackage.AboutActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/border_20"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="@dimen/border_100"
+            android:layout_height="@dimen/border_100"
+            android:scaleType="centerInside"
+            android:src="@mipmap/logo" />
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_marginTop="@dimen/border_15"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/black2"
+            android:text="V1.0"
+            android:textSize="@dimen/sp15" />
+        <TextView
+            android:layout_marginTop="@dimen/border_8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="         名门工程云帮助开发商、监理、施工单位实时协作。适用于安全质量检查、实测实量等业务场景。可在APP中实现问题登记、整改、复验的完整流程。"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_1"
+        android:background="@color/gray_back" />
+
+    <LinearLayout
+        android:id="@+id/ll_clear_cache"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_45"
+        android:background="@color/white_"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/border_15"
+        android:paddingRight="@dimen/border_15">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="iOS版下载"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/tv_ios"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="复制链接地址"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+
+            android:layout_width="@dimen/border_18"
+            android:layout_height="@dimen/border_18"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_right_gray_to" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_1"
+        android:background="@color/gray_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_45"
+        android:background="@color/white_"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/border_15"
+        android:paddingRight="@dimen/border_15">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Android版下载"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/tv_android"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="复制链接地址"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:layout_width="@dimen/border_18"
+            android:layout_height="@dimen/border_18"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_right_gray_to" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_1"
+        android:background="@color/gray_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_45"
+        android:background="@color/white_"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/border_15"
+        android:paddingRight="@dimen/border_15">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="二维码下载"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/tv_both"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="iOS与Android通用"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:layout_width="@dimen/border_18"
+            android:layout_height="@dimen/border_18"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_right_gray_to" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_10"
+        android:background="@color/gray_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_45"
+        android:background="@color/white_"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/border_15"
+        android:paddingRight="@dimen/border_15">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="客服电话"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/tv_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="037165897159"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:layout_width="@dimen/border_18"
+            android:layout_height="@dimen/border_18"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_right_gray_to" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_1"
+        android:background="@color/gray_back" />
+</LinearLayout>

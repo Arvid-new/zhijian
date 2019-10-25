@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.workXcjc.PlaceSelectActivity">
+
+    <include layout="@layout/app_white_action_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_bars"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginTop="@dimen/border_10"
+        android:background="@color/gray_back"
+        android:scrollbars="vertical">
+
+        <com.haozhiyan.zhijian.view.MyRecycleView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/border_5"
+            android:padding="@dimen/border_10"
+            android:scrollbars="vertical" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/border_5">
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/border_35"
+            android:layout_marginLeft="@dimen/border_20"
+            android:layout_marginRight="@dimen/border_20"
+            android:background="@drawable/blue_10shape"
+            android:text="@string/sureStr"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+</RelativeLayout>

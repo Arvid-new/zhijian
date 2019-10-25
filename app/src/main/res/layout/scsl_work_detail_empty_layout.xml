@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:background="@color/gray_back2">
+
+    <ImageView
+        android:id="@+id/iv_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/border_20"
+        android:src="@drawable/no_data_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_no_data"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/border_8"
+        android:gravity="center_horizontal"
+        android:text="暂无实测记录"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp16" />
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:scrollbars="vertical">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/border_50"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="570dp" />
+        <!--<com.haozhiyan.zhijian.widget.RoundWebView-->
+            <!--android:id="@+id/webView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/scSlZgRcv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/webView"
+            android:padding="@dimen/border_8"
+            android:background="@color/white"
+            android:nestedScrollingEnabled="true" />
+        <!--通知整改功能布局-->
+        <LinearLayout
+            android:id="@+id/ll_remindZG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scSlZgRcv"
+            android:layout_marginTop="@dimen/border_10"
+            android:paddingBottom="@dimen/border_40"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/border_45"
+                android:layout_marginBottom="@dimen/border_20"
+                android:background="#eff0f4">
+
+                <LinearLayout
+                    android:id="@+id/ll_checkRemind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkRemind"
+                        android:layout_width="@dimen/border_25"
+                        android:layout_height="@dimen/border_25"
+                        android:layout_marginLeft="@dimen/border_10"
+                        android:background="@drawable/check_null"
+                        android:clickable="false"
+                        android:checked="false"
+                        android:button="@null" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/border_5"
+                        android:text="通知整改"
+                        android:textColor="@color/black_3"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_zg_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/border_45"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/border_8">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="整改人"
+                        android:textColor="@color/black_3"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/zhengGaiPeople"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:gravity="right|center_vertical"
+                        android:hint="请选择"
+                        android:textColor="@color/text_color2"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="18dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/arrow_right_gray_to" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#eff0f4"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/remindZG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/border_20"
+                        android:layout_marginTop="@dimen/border_10"
+                        android:layout_marginRight="@dimen/border_20"
+                        android:background="@drawable/blue_10shape"
+                        android:text="通知整改"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

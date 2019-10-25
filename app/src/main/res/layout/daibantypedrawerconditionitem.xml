@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:id="@+id/backlayout"
+    android:background="#f7f7f7"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="aa"
+        android:textColor="#232323"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/rightLine"
+        android:layout_width="1.5px"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="#e0e0e0" />
+
+    <View
+        android:id="@+id/bootomLine"
+        android:layout_width="match_parent"
+        android:layout_height="1.5px"
+        android:layout_alignParentBottom="true"
+        android:background="#e0e0e0" />
+
+</RelativeLayout>

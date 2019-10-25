@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.MePackage.PersonalInfoActivity">
+
+    <include layout="@layout/app_white_action_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_back"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/border_5"
+            android:background="@color/white"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/border_10">
+
+            <TextView
+                style="@style/meText"
+                android:text="头像" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/headView"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:scaleType="centerCrop"
+                fresco:placeholderImage="@drawable/img_normal_header_fx"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundAsCircle="false"
+                fresco:roundedCornerRadius="10dp"
+                fresco:roundingBorderColor="@color/white"
+                fresco:roundingBorderWidth="1.0dp" />
+
+            <ImageView
+                android:layout_width="@dimen/border_15"
+                android:layout_height="@dimen/border_15"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrow_right_black_to" />
+        </LinearLayout>
+
+        <View style="@style/line"></View>
+
+        <LinearLayout style="@style/personal_linear">
+
+            <TextView
+                style="@style/meText"
+                android:text="姓名" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/border_5"
+                android:text=""
+                android:textColor="@color/home_text"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+
+        <View style="@style/line"></View>
+
+        <LinearLayout style="@style/personal_linear">
+
+            <TextView
+                style="@style/meText"
+                android:text="账号" />
+
+            <TextView
+                android:id="@+id/tv_login_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/border_5"
+                android:text=""
+                android:textColor="@color/home_text"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+
+        <View style="@style/line"></View>
+
+        <LinearLayout
+            android:id="@+id/ll_updatePass"
+            style="@style/personal_linear">
+
+            <TextView
+                style="@style/meText"
+                android:text="修改密码" />
+
+            <ImageView
+                android:layout_width="@dimen/border_18"
+                android:layout_height="@dimen/border_18"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrow_right_gray_to" />
+        </LinearLayout>
+
+        <View style="@style/line"></View>
+
+        <LinearLayout
+            android:id="@+id/ll_updatePhone"
+            style="@style/personal_linear">
+
+            <TextView
+                style="@style/meText"
+                android:text="手机号码" />
+
+            <TextView
+                android:id="@+id/tv_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/border_6"
+                android:text=""
+                android:textColor="@color/home_text"
+                android:textSize="@dimen/sp14" />
+
+            <ImageView
+                android:layout_width="@dimen/border_18"
+                android:layout_height="@dimen/border_18"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrow_right_gray_to" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_exit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/border_15"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/border_8"
+            android:text="退出登录"
+            android:textColor="@color/black_3"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+</LinearLayout>

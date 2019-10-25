@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:minWidth="@dimen/border_70"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_35"
+        android:focusable="true"
+        android:background="@drawable/back2_text_selector"
+        android:textIsSelectable="false"
+        android:gravity="center"
+        android:paddingLeft="@dimen/border_5"
+        android:paddingRight="@dimen/border_5"
+        android:text="17层公区"
+        android:textColor="@color/black_3"
+        android:textSize="@dimen/sp18" />
+</LinearLayout>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.workScsl.SCSLDetail">
+    <!--顶部栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_50"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_back"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/border_6">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/arrow_left_black" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/border_8"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_close" />
+        </LinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/border_8"
+            android:layout_marginRight="@dimen/border_15"
+            android:layout_weight="3"
+            app:tabIndicatorColor="@color/translate"
+            app:tabSelectedTextColor="@color/blue"
+            app:tabTextColor="@color/black_3" />
+
+        <ImageView
+            android:id="@+id/iv_right_icon"
+            android:layout_width="@dimen/border_20"
+            android:layout_height="@dimen/border_20"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/border_20"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_gantan_img" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_gray_light" />
+
+    <LinearLayout
+        android:id="@+id/ll_window"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_50"
+        android:background="#EDF0FF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_bd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/border_8"
+            android:layout_marginTop="@dimen/border_3"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/border_3">
+
+            <LinearLayout
+                android:id="@+id/ll_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_bdName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/border_8"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_2"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:id="@+id/tv_local"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/border_2"
+                    android:layout_marginRight="@dimen/border_8"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp15" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv01"
+                android:layout_width="@dimen/border_15"
+                android:layout_height="@dimen/border_15"
+                android:layout_marginRight="@dimen/border_8"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrow_down_gray" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/border_1"
+            android:layout_height="match_parent"
+            android:background="@color/gray" />
+        <!--弹窗选择-->
+        <LinearLayout
+            android:id="@+id/ll_bd_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/border_3">
+
+            <LinearLayout
+                android:id="@+id/ll_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/border_8"
+                android:layout_marginTop="@dimen/border_3"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_desc_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/border_8"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black_2"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:id="@+id/tv_desc_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/border_2"
+                    android:layout_marginRight="@dimen/border_8"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp15" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv02"
+                android:layout_width="@dimen/border_15"
+                android:layout_height="@dimen/border_15"
+                android:layout_marginRight="@dimen/border_5"
+                android:scaleType="centerInside"
+                android:src="@drawable/arrow_down_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/rl_backClick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/translate_ban2"
+            android:paddingBottom="@dimen/border_50">
+
+            <include
+                layout="@layout/scsl_list_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

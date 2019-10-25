@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SettingActivity">
+    <View
+        android:background="@color/gray_back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_10"/>
+    <LinearLayout
+        android:background="@color/white_"
+        android:id="@+id/ll_clear_cache"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/border_15"
+        android:paddingRight="@dimen/border_15"
+        android:layout_height="@dimen/border_45">
+        <TextView
+            android:text="清理缓存"
+            android:textSize="@dimen/sp15"
+            android:gravity="center_vertical"
+            android:textColor="@color/black3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_cache_size"
+            android:textSize="@dimen/sp14"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:layout_width="@dimen/border_18"
+            android:layout_height="@dimen/border_18"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_right_gray_to" />
+    </LinearLayout>
+    <View
+        android:layout_marginLeft="@dimen/border_15"
+        android:background="@color/gray_back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_1"/>
+</LinearLayout>

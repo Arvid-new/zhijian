@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/bdll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white_"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="所属标段"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/bdTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray_to" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clNameLL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1.5px"
+            android:background="@color/white_"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="材料名称"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/clNameTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text=""
+                android:textColor="@color/black2"
+                android:gravity="right"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray_to" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clTypeLL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_marginTop="1.5px"
+            android:background="@color/white_"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="材料类型"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/clTypeTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray_to" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/clShopLL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1.5px"
+            android:background="@color/white_"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="材料供应商"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/clShopTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray_to" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1.5px"
+            android:background="@color/white_"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="使用部位"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/usePlaceET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="选填"
+                android:textColor="@color/black2"
+                android:textColorHint="@color/text_color_b6"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="1.5px"
+            android:background="@color/white_">
+
+            <EditText
+                android:id="@+id/descET"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="补充说明(选填)"
+                android:padding="10dp"
+                android:textColor="@color/black2"
+                android:textColorHint="@color/text_color_b6"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/descNumTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="200" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/receiveLL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white_"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="接收人"
+                    android:textColor="@color/black2"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/receiveTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text=""
+                android:gravity="right"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray_to" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/receivePartLL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1.5px"
+            android:background="@color/white_"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="接收单位"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/receivePartTV"
+                android:layout_width="0dp"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray_to" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/supervisorLL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1.5px"
+            android:background="@color/white_"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="监理"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/supervisorTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray_to" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white_"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="需建设单位验收"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+
+            <Switch
+                android:id="@+id/acceptSW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:switchMinWidth="20dp"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buildAcceptLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:layout_marginTop="1.5px"
+            android:background="@color/white_"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="建设单位验收人"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/buildAcceptTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_weight="1.5"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray_to" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/copyLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:layout_marginTop="1.5px"
+            android:background="@color/white_"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="抄送人"
+                android:textColor="@color/black2"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/copyTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:text="选填"
+                android:textColor="@color/text_color_b6"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:src="@drawable/arrow_right_gray_to" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/commitBT"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/lightbluetodeepblue_radius50"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

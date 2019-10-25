@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:gravity="left"
+    android:orientation="horizontal"
+    android:padding="@dimen/border_3">
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解冰清【施工单位】"
+        android:textColor="@color/black_3"
+        android:textSize="@dimen/sp15" />
+
+    <ImageView
+        android:id="@+id/iv_window"
+        android:layout_width="@dimen/border_20"
+        android:layout_height="@dimen/border_20"
+        android:layout_marginLeft="@dimen/border_8"
+        android:scaleType="centerInside"
+        android:src="@drawable/img_blue_message" />
+</LinearLayout>

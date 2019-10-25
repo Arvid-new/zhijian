@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.workXcjc.XcJcBackReason">
+
+    <include layout="@layout/app_white_action_bar" />
+
+    <ListView
+        android:id="@+id/reasonList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:divider="@color/line_gray_light"
+        android:dividerHeight="@dimen/border_1" />
+
+    <Button
+        android:id="@+id/btnCommit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_40"
+        android:layout_margin="@dimen/border_10"
+        android:background="@drawable/blue_10shape"
+        android:text="提交"
+        android:textColor="@color/white_"
+        android:textSize="@dimen/sp15" />
+</LinearLayout>

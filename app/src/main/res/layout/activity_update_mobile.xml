@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MePackage.UpdatePass">
+
+    <include layout="@layout/app_white_action_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_bars"
+        android:background="@color/white_"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/border_8"
+            android:background="@color/gray_back" />
+
+        <TextView
+            android:id="@+id/tv_yuan_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/border_40"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black_3"
+            android:textSize="@dimen/sp15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/border_20"
+            android:layout_marginRight="@dimen/border_20"
+            android:orientation="horizontal"
+            android:padding="@dimen/border_5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="手机号"
+                android:textColor="@color/black_3"
+                android:textSize="@dimen/sp15"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_newMobile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/gray_border_shape"
+                android:cursorVisible="true"
+                android:hint="输入新手机号"
+                android:inputType="phone"
+                android:paddingLeft="@dimen/border_10"
+                android:textColor="@color/black_3"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/border_40"
+            android:layout_marginLeft="@dimen/border_30"
+            android:layout_marginTop="@dimen/border_20"
+            android:layout_marginRight="@dimen/border_30"
+            android:background="@drawable/blue_10shape"
+            android:text="确认修改"
+            android:textColor="@color/white_"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+</RelativeLayout>

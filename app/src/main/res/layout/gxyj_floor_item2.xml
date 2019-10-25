@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_flooer"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/gray_back"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/sp15"
+        android:text="1层"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp16" />
+
+    <TextView
+        android:id="@+id/allCheckTv"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_flooer"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/tv_flooer"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:gravity="center"
+        android:text="全选"
+        android:textColor="@color/blue5"
+        android:textSize="13sp" />
+</RelativeLayout>

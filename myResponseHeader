@@ -1,0 +1,115 @@
+
+//---------------------------------------------------请求response处理---------------------------------------------------------------------------
+                        //response.getRawResponse().header("Set-Cookie","其他值，当name为空时会取这个值")
+                        //String header = response.getRawResponse().header("Set-Cookie","其他值，当name为空时会取这个值");
+
+                        //response.headers()拿到带key值数据 Set-Cookie: JSESSIONID=7427269d-7fb3-48d5-a061-fead50fd006e; Path=/ydzj-admin; HttpOnly
+                        //LogUtils.print("onSuccessHeader22===" + response.headers());
+
+                        //response.body()拿到数据[JSESSIONID=7427269d-7fb3-48d5-a061-fead50fd006e; Path=/ydzj-admin; HttpOnly]
+                        //LogUtils.print("onSuccessHeader33===" + response.body());
+
+                        // response.getRawResponse()的结果,获取相应状态及对应接口
+                        // Response{protocol=http/1.1, code=200, message=, url=http://192.168.110.99:8080/ydzj-admin/sys/loginApp}
+                        //LogUtils.print("onSuccessHeader55===" + response.getRawResponse());
+
+                                            @Override
+                                            public Object convertResponse(okhttp3.Response response) throws Throwable {
+                                                hideLoadView();
+                                                try {
+                                                    List<String> headerList = response.headers("Set-Cookie");
+                                                    for (String key : headerList) {
+                                                        LogUtils.print("keyHeader===" + key);
+                                                        //keyHeader===JSESSIONID=7427269d-7fb3-48d5-a061-fead50fd006e; Path=/ydzj-admin; HttpOnly
+                                                    }
+                                                } catch (Exception e) {
+                                                    e.printStackTrace();
+                                                }
+                                                return response.headers("Set-Cookie");
+                                            }
+                                        });
+
+ //--------------------------------------------------------实测实量界面控件显示布局------------------------------------------------------------
+
+           <!--<LinearLayout-->
+                      <!--android:layout_width="match_parent"-->
+                      <!--android:layout_height="@dimen/border_45"-->
+                      <!--android:layout_marginTop="@dimen/border_1"-->
+                      <!--android:background="@color/white"-->
+                      <!--android:gravity="center_vertical"-->
+                      <!--android:orientation="horizontal">-->
+
+                      <!--<TextView-->
+                      <!--android:layout_width="wrap_content"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:layout_marginLeft="@dimen/border_10"-->
+                      <!--android:text="合格率"-->
+                      <!--android:textColor="@color/black2"-->
+                      <!--android:textSize="@dimen/sp15" />-->
+
+                      <!--<TextView-->
+                      <!--android:id="@+id/tv_percent_of_pass"-->
+                      <!--android:layout_width="match_parent"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:layout_marginRight="@dimen/border_20"-->
+                      <!--android:layout_weight="1"-->
+                      <!--android:gravity="right"-->
+                      <!--android:text="25%"-->
+                      <!--android:textColor="@color/blue"-->
+                      <!--android:textSize="@dimen/sp15" />-->
+                      <!--</LinearLayout>-->
+
+                      <!--<LinearLayout-->
+                      <!--android:layout_width="match_parent"-->
+                      <!--android:layout_height="@dimen/border_45"-->
+                      <!--android:layout_marginTop="@dimen/border_10"-->
+                      <!--android:background="@color/white"-->
+                      <!--android:gravity="center_vertical"-->
+                      <!--android:orientation="horizontal">-->
+
+                      <!--<TextView-->
+                      <!--android:layout_width="match_parent"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:layout_marginLeft="@dimen/border_10"-->
+                      <!--android:layout_weight="1"-->
+                      <!--android:text="点数"-->
+                      <!--android:textColor="@color/text_color"-->
+                      <!--android:textSize="@dimen/sp15" />-->
+
+                      <!--<TextView-->
+                      <!--android:id="@+id/tv_scslCount"-->
+                      <!--android:layout_width="match_parent"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:layout_weight="1"-->
+                      <!--android:gravity="left"-->
+                      <!--android:text="2"-->
+                      <!--android:textColor="@color/black_3"-->
+                      <!--android:textSize="@dimen/sp15" />-->
+                      <!--</LinearLayout>-->
+
+                      <!--<LinearLayout-->
+                      <!--android:layout_width="match_parent"-->
+                      <!--android:layout_height="@dimen/border_45"-->
+                      <!--android:background="@color/white"-->
+                      <!--android:gravity="center_vertical"-->
+                      <!--android:orientation="horizontal">-->
+
+                      <!--<TextView-->
+                      <!--android:layout_width="match_parent"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:layout_marginLeft="@dimen/border_10"-->
+                      <!--android:layout_weight="1"-->
+                      <!--android:text="合格标准"-->
+                      <!--android:textColor="@color/text_color"-->
+                      <!--android:textSize="@dimen/sp15" />-->
+
+                      <!--<TextView-->
+                      <!--android:id="@+id/tv_qualifiedStandard"-->
+                      <!--android:layout_width="match_parent"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:layout_weight="1"-->
+                      <!--android:gravity="left"-->
+                      <!--android:text="平整度[0,4]"-->
+                      <!--android:textColor="@color/black_3"-->
+                      <!--android:textSize="@dimen/sp15" />-->
+                      <!--</LinearLayout>-->

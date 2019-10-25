@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.NoticeDetail">
+
+    <include layout="@layout/app_white_action_bar" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_5"
+        android:background="@color/gray_back"/>
+
+    <RelativeLayout
+        android:padding="@dimen/border_10"
+        android:layout_marginTop="@dimen/border_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/border_20"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="@color/black_2"
+            android:textSize="@dimen/sp16"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_date_name"
+            android:layout_below="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/border_20"
+            android:layout_marginTop="@dimen/border_2"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="2019-08-13  慎晓鹏"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/sp13" />
+        <View
+            android:id="@+id/view_line"
+            android:layout_below="@+id/tv_date_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/border_1"
+            android:layout_marginTop="@dimen/border_8"
+            android:background="@color/text_color_ca"/>
+        <ScrollView
+            android:layout_below="@+id/view_line"
+            android:paddingLeft="@dimen/border_20"
+            android:paddingRight="@dimen/border_20"
+            android:layout_marginTop="@dimen/sp15"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/border_2"
+                android:singleLine="false"
+                android:text=""
+                android:textColor="@color/black_3"
+                android:lineSpacingExtra="5dp"
+                android:lineSpacingMultiplier="1.2"
+                android:textSize="@dimen/sp14" />
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

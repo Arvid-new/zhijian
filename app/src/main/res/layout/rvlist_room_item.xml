@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <!--住户编号-->
+    <!--<com.haozhiyan.zhijian.view.MyGridView-->
+        <!--android:id="@+id/room_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:horizontalSpacing="@dimen/border_5"-->
+        <!--android:numColumns="4"-->
+        <!--android:padding="@dimen/border_5"-->
+        <!--android:verticalSpacing="@dimen/border_5" />-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/room_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="@dimen/border_5"
+        android:padding="@dimen/border_5"
+        android:verticalSpacing="@dimen/border_5" />
+</RelativeLayout>

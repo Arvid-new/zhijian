@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/translate"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.ShowVideo">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translate">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="@dimen/border_20"
+            android:layout_height="@dimen/border_20"
+            android:layout_marginLeft="@dimen/border_5"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_left_black" />
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/border_5"
+            android:layout_below="@+id/back_iv"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:visibility="gone" />
+</LinearLayout>

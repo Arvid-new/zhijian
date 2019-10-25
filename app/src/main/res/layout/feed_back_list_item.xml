@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/border_5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/border_5">
+
+        <com.haozhiyan.zhijian.view.MyRecycleView
+            android:id="@+id/iv_feedBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tv_feedBackContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_feedBack"
+            android:text=""
+            android:textColor="@color/black_3"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/tv_feedBackTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_feedBackContent"
+            android:layout_marginTop="@dimen/border_2"
+            android:text=""
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp14" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_lines"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_1"
+        android:background="@color/gray_back" />
+
+    <LinearLayout
+        android:id="@+id/ll_CustomerService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/border_3"
+        android:orientation="horizontal"
+        android:padding="@dimen/border_5">
+
+        <TextView
+            android:id="@+id/tv_CustomerService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_feedBackContent"
+            android:background="@drawable/yellow_back_shape"
+            android:padding="@dimen/border_3"
+            android:text="客服"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/border_8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_CustomerServiceFeedBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black_3"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/tv_CustomerServiceFeedBackTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_feedBackContent"
+                android:layout_marginTop="@dimen/border_2"
+                android:text=""
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragment.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_dataList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_back2"
+            android:paddingTop="@dimen/border_8"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_45"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dzg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待整改" />
+
+        <Button
+            android:id="@+id/dfy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待复验" />
+
+        <Button
+            android:id="@+id/ycClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待整改" />
+
+        <Button
+            android:id="@+id/ytg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待整改" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,154 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.neenbedankt.android-apt'//依赖butterKnife
+apply plugin: 'org.greenrobot.greendao'
+android {
+
+    compileSdkVersion 27
+    buildToolsVersion "27.0.0"
+    /*   defaultConfig {
+
+        //applicationId "com.haozhiyan.zhijian"
+        applicationId "com.mm.gcyun"
+        //applicationId "com.qw.gcyun"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 2
+        versionName "V1.1"
+        flavorDimensions("2")
+        multiDexEnabled true
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "8147a648488a1cf928ae9f99",//mienre
+                //JPUSH_APPKEY : "99b5febecec3003b6180343e",//hzy
+                //JPUSH_APPKEY :"ed2dcb56cd5d91174d093c56",//qianwu
+                JPUSH_CHANNEL: "developer-default",
+                app_icon     : "@mipmap/logo",
+        ]
+    }*/
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    productFlavors {
+        mienre {
+            applicationId 'com.mm.gcyun'
+            minSdkVersion 16
+            targetSdkVersion 27
+            versionCode 5
+            versionName "V1.4"
+            flavorDimensions("5")
+            multiDexEnabled true
+            ndk {
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            }
+            resValue "string", "app_name", "名门工程云"
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: applicationId,
+                    JPUSH_APPKEY : "8147a648488a1cf928ae9f99",//mienre
+                    JPUSH_CHANNEL: "mienre",
+                    app_icon     : "@mipmap/logo",
+            ]
+        }
+        haozhiyan {
+            applicationId 'com.haozhiyan.zhijian'
+            minSdkVersion 16
+            targetSdkVersion 27
+            versionCode 5
+            versionName "V1.4"
+            flavorDimensions("5")
+            multiDexEnabled true
+            ndk {
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            }
+            resValue "string", "app_name", "移动质检"
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: applicationId,
+                    JPUSH_APPKEY : "99b5febecec3003b6180343e",//hzy
+                    JPUSH_CHANNEL: "hzy",
+                    app_icon     : "@mipmap/logo",
+            ]
+        }
+        qianwu {
+            applicationId 'com.qw.gcyun'
+            minSdkVersion 16
+            targetSdkVersion 27
+            versionCode 5
+            versionName "V1.4"
+            flavorDimensions("5")
+            multiDexEnabled true
+            ndk {
+                abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            }
+            resValue "string", "app_name", "千屋工程云"
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: applicationId,
+                    JPUSH_APPKEY : "ed2dcb56cd5d91174d093c56",//qianwu
+                    JPUSH_CHANNEL: "qianwu",
+                    app_icon     : "@mipmap/logo",
+            ]
+        }
+    }
+}
+greendao {
+    schemaVersion 1 //数据库版本号
+    daoPackage 'com.haozhiyan.zhijian.myDao'
+    targetGenDir 'src/main/java'
+//    generateTests false //设置为true以自动生成单元测试
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testCompile 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:27.0.0'
+    implementation 'com.android.support:support-v4:27.0.0'
+    implementation 'com.android.support:design:27.0.0'
+    implementation 'com.jiechic.library:xUtils:2.6.14'
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.readystatesoftware.chuck:library:1.0.4'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.android.support:recyclerview-v7:27.0.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
+    implementation 'cc.solart:turbo-recyclerview-helper:1.0.3-beta'
+    //图片万能使用包
+    implementation 'com.facebook.fresco:fresco:1.0.0'
+    //查看大图
+    implementation 'com.github.chrisbanes:PhotoView:1.2.6'
+    //图片加载框架
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    //图片加载框架2
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:1.2.0'
+    //定位、地图
+    implementation 'com.amap.api:location:latest.integration'
+    implementation 'com.amap.api:map2d:latest.integration'
+    implementation 'com.github.xujiaji:happy-bubble:1.0.1'
+    implementation 'com.github.TengJW:PicSelector:-SNAPSHOT'
+    //日历控件↓↓↓↓
+    implementation 'com.haibin:calendarview:3.6.1'
+    //compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    implementation 'se.emilsjolander:stickylistheaders:2.7.0'
+    //FlexboxLayout  高级的 LinearLayout
+    implementation 'com.google.android:flexbox:1.0.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.jakewharton:butterknife:8.7.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.github.RmondJone:LockTableView:1.1.2'
+    implementation 'cn.jiguang.sdk:jpush:3.3.4'
+    implementation 'cn.jiguang.sdk:jcore:2.1.2'
+    implementation 'org.greenrobot:greendao:3.0.1'
+    implementation 'com.alibaba:fastjson:1.1.71.android'
+}

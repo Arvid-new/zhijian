@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.gxyj.GxYjPlaceSelect">
+
+    <include layout="@layout/app_white_action_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_bars"
+        android:background="@color/gray_back2"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/border_45"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_tower"
+                android:layout_width="@dimen/border_80"
+                android:layout_height="@dimen/border_30"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/sp15"
+                android:background="@drawable/blue_5radius_back"
+                android:gravity="center"
+                android:text="楼栋"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/border_45"
+            android:layout_marginTop="@dimen/border_1"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_unit"
+                android:layout_width="@dimen/border_80"
+                android:layout_height="@dimen/border_30"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/sp15"
+                android:background="@drawable/gray_border_shape"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black_3" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_unit"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/sp15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/tfr_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/border_10"
+            android:background="@color/white_"
+            android:padding="@dimen/border_8"
+            android:visibility="visible" />
+    </LinearLayout>
+</RelativeLayout>
