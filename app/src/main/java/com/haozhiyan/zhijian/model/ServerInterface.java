@@ -14,11 +14,7 @@ public class ServerInterface {
         if (isBaseUrl) {//formal environment
 //        
         } else {//test environment
-//              serverLocal = "http://192.168.110.66:8080/ydzj-admin/";//王晨星
-//            serverLocal = "http://192.168.110.248:8080/ydzj-admin/";//张艳辉
-//            serverLocal = "http://192.168.110.110:8091/ydzj-admin/";
-            serverLocal = "http://192.168.110.127:8080/ydzj-admin/";//李昂
-//            serverLocal = "http://114.115.152.159:8083/ydzj-admin/";//测试
+//          
         }
         return serverLocal;
     }
