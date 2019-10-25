@@ -12,8 +12,7 @@ public class ServerInterface {
 
     private static String BaseUrl() {
         if (isBaseUrl) {//formal environment
-//         serverLocal = "http://ms.mienre.com/ydzj-admin/";
-            serverLocal = "http://zj.mienre.com/";
+//        
         } else {//test environment
 //              serverLocal = "http://192.168.110.66:8080/ydzj-admin/";//王晨星
 //            serverLocal = "http://192.168.110.248:8080/ydzj-admin/";//张艳辉
